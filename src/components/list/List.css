@@ -4,4 +4,13 @@
 
 .sk-list-item {
     border: solid 1px orange;
+    margin: 2px;
+    padding-left: 3px;
+}
+
+.sk-selected-list-item {
+    border: solid 1px navy;
+    border-left: dashed 7px skyblue;
+    margin: 2px;
+    padding-left: 3px;
 }
