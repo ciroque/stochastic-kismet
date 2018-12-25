@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Label from './label';
+import Label from './Label';
 
 it('renders the given text', () => {
     const expectedText = 'This is my text';

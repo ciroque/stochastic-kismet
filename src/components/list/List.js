@@ -1,5 +1,5 @@
 import React from 'react';
-import './list.css';
+import './List.css';
 
 const ListItem = (props) => (<div key={props.key} className="sk-list-item">{props.text}</div>);
 

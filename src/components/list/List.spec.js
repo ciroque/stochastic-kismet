@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import List from './list';
+import List from './List';
 
 it('renders an empty list', () => {
     const div = document.createElement('div');
