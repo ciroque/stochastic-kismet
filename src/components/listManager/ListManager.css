@@ -1,0 +1,63 @@
+.list-manager {
+    display: inline-grid;
+    grid-template-columns: 240px 40px 240px 40px 240px;
+    grid-template-rows: 32px 32px 32px 32px 32px 32px 32px 32px;
+}
+
+.source-list-label {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.add-list-item-button {
+
+}
+
+.remove-list-item-button {
+
+}
+
+.source-list {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 9;
+}
+
+.shuffle-button {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+
+.select-button {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 5;
+    grid-row-end: 6;
+}
+
+.reset-button {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 7;
+    grid-row-end: 8;
+}
+
+.shuffled-list-label {
+    grid-column-start: 5;
+    grid-column-end: 6;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.shuffled-list {
+    grid-column-start: 5;
+    grid-column-end: 6;
+    grid-row-start: 2;
+    grid-row-end: 9;
+}
+
