@@ -1,3 +1,7 @@
-.sk-li {
+.sk-list {
+    background-color: whitesmoke;
+}
+
+.sk-list-item {
     border: solid 1px orange;
 }
