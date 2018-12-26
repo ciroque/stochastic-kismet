@@ -18,12 +18,14 @@ export default class ListManagement extends React.Component {
     handleAddClick = (event) => {
         this.props.addItem(this.state.text);
         this.setState({text: ''});
+        document.getElementById('itemText').focus();
     };
 
     render = () => {
         return (
             <div>
                 <input
+                    id='itemText'
                     type='text'
                     placeholder='Enter item text...'
                     value={this.state.text}
@@ -38,8 +40,8 @@ export default class ListManagement extends React.Component {
                 >+</button>
                 <button
                     className='sk-list-management-button'
-                    onClick={() => this.state.clickHandler()}
-                    disabled={this.props.canDelete}
+                    onClick={this.props.deleteItems}
+                    disabled={this.props.deleteDisabled}
                 >-</button>
             </div>
         );

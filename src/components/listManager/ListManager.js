@@ -22,12 +22,19 @@ export default class ListManager extends React.Component {
                 {tag: 8, text: '.........', selected: false },
                 {tag: 9, text: '..........', selected: false },
             ],
-            shuffledItems: []
+            shuffledItems: [],
+            deleteDisabled: true
         }
     }
 
     addItem = (newItem) => {
-        this.setState((ps) => ({items: [...ps.items, {tag: ps.items.length, text: newItem, selected: false}]}));
+        const nextTag = (Date.now()).toString(36);
+        this.setState((ps) => ({items: [...ps.items, {tag: nextTag, text: newItem, selected: false}]}));
+    };
+
+    deleteItems = () => {
+        const newItems = this.state.items.filter(i => i.selected === false);
+        this.setState({items: newItems});
     };
 
     // Fisher-Yates shuffle: http://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle
@@ -79,7 +86,7 @@ export default class ListManager extends React.Component {
         const updatedItems = Array.from(this.state.items); // this.state.items.splice(0);
         const selectedIndex = updatedItems.findIndex(i => i.tag === item.tag);
         this.toggleSelectedAt(updatedItems, selectedIndex);
-        this.setState({items: updatedItems});
+        this.setState({items: updatedItems, deleteDisabled: !updatedItems.some(i => i.selected)});
     };
 
     toggleSelectedAt = (items, index) => {
@@ -99,6 +106,8 @@ export default class ListManager extends React.Component {
                 <div className='list-item-management'>
                     <ListManagement
                         addItem={this.addItem}
+                        deleteDisabled={this.state.deleteDisabled}
+                        deleteItems={this.deleteItems}
                     />
                 </div>
                 <div className='source-list'>
