@@ -2,7 +2,7 @@
     display: grid;
     /*grid-template-columns: 240px 40px 240px 40px 240px;*/
     grid-template-columns: 30% 5% 30% 5% 30%;
-    grid-template-rows: 120px 32px 32px 32px 32px 32px 32px 32px 32px;
+    grid-template-rows: 120px 32px 32px 32px 32px 32px 32px 32px 32px 32px;
 }
 
 .banner {
@@ -20,18 +20,18 @@
     grid-row-end: 3;
 }
 
-.add-list-item-button {
-
-}
-
-.remove-list-item-button {
-
+.list-item-management {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    width: 100%;
 }
 
 .source-list {
     grid-column-start: 1;
     grid-column-end: 2;
-    grid-row-start: 3;
+    grid-row-start: 4;
     grid-row-end: 10;
 }
 
@@ -74,5 +74,5 @@
     grid-column-start: 5;
     grid-column-end: 6;
     grid-row-start: 3;
-    grid-row-end: 10;
+    grid-row-end: 12;
 }

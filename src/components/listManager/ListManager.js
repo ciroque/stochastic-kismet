@@ -3,6 +3,7 @@ import Label from "../label/Label";
 import List from "../list/List";
 import ActionButton from "../actionButton/ActionButton";
 import './ListManager.css';
+import ListManagement from "../listManagementButton/ListManagement";
 
 export default class ListManager extends React.Component {
     constructor(props) {
@@ -25,10 +26,8 @@ export default class ListManager extends React.Component {
         }
     }
 
-    addItem = () => {
-        // const newItem = new Date().getMilliseconds();
-        // console.log(`...>>> ${newItem}`);
-        // this.setState((ps) => ({items: [...ps.items, newItem]}), () => console.warn(this.state.items));
+    addItem = (newItem) => {
+        this.setState((ps) => ({items: [...ps.items, {tag: ps.items.length, text: newItem, selected: false}]}));
     };
 
     // Fisher-Yates shuffle: http://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle
@@ -96,6 +95,11 @@ export default class ListManager extends React.Component {
                 <div className='banner jumbotron'>Stochastic Kismet</div>
                 <div className='source-list-label'>
                     <Label text='Source List' />
+                </div>
+                <div className='list-item-management'>
+                    <ListManagement
+                        addItem={this.addItem}
+                    />
                 </div>
                 <div className='source-list'>
                     <List
