@@ -22,6 +22,6 @@ docker run -dit --name stochastic-kismet -p 808:5000 ciroque/stochastic-kismet
 
 #### Online
 
-There is a running example which can be found at [stochastic-kismet.xyz](http://stochastic-kismet.xyz)
+There is a running example which can be found at [stochastic-kismet.xyz](http://www.stochastic-kismet.xyz)
 
 
