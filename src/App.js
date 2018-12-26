@@ -5,7 +5,7 @@ import ListManager from "./components/listManager/ListManager";
 class App extends Component {
   render() {
     return (
-      <div className="App">
+      <div className="App container">
         <ListManager />
       </div>
     );

@@ -93,6 +93,7 @@ export default class ListManager extends React.Component {
     render = () => {
         return (
             <div className='list-manager'>
+                <div className='banner jumbotron'>Stochastic Kismet</div>
                 <div className='source-list-label'>
                     <Label text='Source List' />
                 </div>
